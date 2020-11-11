@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-	"use strict";
+	// "use strict";
+
+	const hours = document.querySelector('.hours'),
+		minutes = document.querySelector('.minutes'),
+		seconds = document.querySelector('.seconds');
 
 	let content = document.querySelectorAll('.info-tabcontent'),
 		tab = document.querySelectorAll('.info-header-tab'),
@@ -30,4 +34,19 @@ window.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 	});
+
+	function updateTime() {
+		let deadline = new Date(2021, 01, 01, 00, 00, 00) - new Date();
+
+		let newHours = Math.floor((deadline / (1000 * 60)) % 24);
+		let newMinutes = Math.floor((deadline / 1000 / 60) % 60);
+		let newSeconds = Math.floor((deadline / 1000) % 60);
+
+		hours.innerHTML = newHours < 10 ? "0" + newHours : newHours;
+		minutes.innerHTML = newMinutes < 10 ? "0" + newMinutes : newMinutes;
+		seconds.innerHTML = newSeconds < 10 ? "0" + newSeconds : newSeconds;
+	}
+	updateTime();
+	setInterval(updateTime, 1000);
+
 });
