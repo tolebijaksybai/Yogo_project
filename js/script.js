@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-	// "use strict";
+	"use strict";
 
 	const hours = document.querySelector('.hours'),
 		minutes = document.querySelector('.minutes'),
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	});
 
 	function updateTime() {
-		let deadline = new Date(2021, 01, 01, 00, 00, 00) - new Date();
+		let deadline = new Date(2021, 12, 1, 0, 0, 0, 0) - new Date();
 
 		let newHours = Math.floor((deadline / (1000 * 60)) % 24);
 		let newMinutes = Math.floor((deadline / 1000 / 60) % 60);
@@ -49,4 +49,20 @@ window.addEventListener('DOMContentLoaded', function () {
 	updateTime();
 	setInterval(updateTime, 1000);
 
+
+	const more = document.querySelector('.more'),
+		overlay = document.querySelector('.overlay'),
+		popupClose = document.querySelector('.popup-close');
+
+	more.addEventListener('click', function () {
+		this.style.display = "none";
+		overlay.style.display = "block";
+		document.body.style.overflow = "hidden";
+	});
+
+	popupClose.addEventListener('click', () => {
+		more.style.display = "block";
+		overlay.style.display = "none";
+		document.body.style.overflow = "";
+	});
 });
