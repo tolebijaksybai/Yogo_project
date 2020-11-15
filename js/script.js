@@ -65,4 +65,29 @@ window.addEventListener('DOMContentLoaded', function () {
 		overlay.style.display = "none";
 		document.body.style.overflow = "";
 	});
+
+	const header = document.querySelector('header');
+/* 
+	class Options {
+		constructor(height, width, bg, fontSize, textAlign) {
+			this.height = height;
+			this.width = width;
+			this.bg = bg;
+			this.fontSize = fontSize;
+			this.textAlign = textAlign;
+		}
+		method() {
+			let div = '<div class="new">Tolebi</div>';
+			header.insertAdjacentHTML('afterbegin', div);
+			const newClass = document.querySelector('.new');
+			let menuItem = `height: ${this.height}px;  width: ${this.width}px; background-color: ${this.bg}; font-size: ${this.fontSize}px; text-align: ${this.textAlign};`;
+			newClass.style.cssText = menuItem;
+		}
+	}
+
+	let option = new Options(50, 500, 'red', 36, 'center');
+	option.method();
+
+ */
+
 });
