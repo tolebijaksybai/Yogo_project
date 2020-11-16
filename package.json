@@ -1,0 +1,23 @@
+{
+  "name": "yoga",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolebijaksybai/Yogo_project.git"
+  },
+  "author": "Tolebi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolebijaksybai/Yogo_project/issues"
+  },
+  "homepage": "https://github.com/tolebijaksybai/Yogo_project#readme",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
