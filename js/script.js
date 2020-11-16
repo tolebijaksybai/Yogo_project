@@ -220,6 +220,9 @@ window.addEventListener('DOMContentLoaded', function () {
 			totalValue.innerHTML = 0;
 		} else {
 			totalValue.innerHTML = total;
+			if (persons.value == '' || restDays.value == '') {
+				totalValue.innerHTML = 0;
+			}
 		}
 	});
 	restDays.addEventListener('change', function () {
@@ -230,6 +233,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			totalValue.innerHTML = 0;
 		} else {
 			totalValue.innerHTML = total;
+
 		}
 	});
 
